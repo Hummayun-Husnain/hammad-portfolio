@@ -11,7 +11,7 @@ const projNeuro = "src/assets/image_original3.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
+      { title: "Muhammad Hammad Bashir — portfolio" },
       { name: "description", content: "Computer Vision Engineer (5+ yrs) building real-time sports AI, multi-camera video intelligence, and multimodal LLM systems. Available for consulting." },
       { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & Sports AI" },
       { property: "og:description", content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI." },
@@ -150,7 +150,7 @@ function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono text-primary">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Available for new computer-vision projects
+            Available for work
           </div>
           <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.02]">
             Muhammad <span className="text-gradient">Hammad</span><br />Bashir
@@ -328,7 +328,7 @@ function Contact() {
           <div className="relative">
             <SectionLabel num="05" title="Let's build" />
             <h2 className="mt-6 text-4xl md:text-5xl font-semibold leading-tight">
-              Have a vision problem worth <span className="text-gradient">solving?</span>
+              Have a problem worth <span className="text-gradient">solving?</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
               From a quick consult to a full production system — based in Punjab, Pakistan, working with teams worldwide.

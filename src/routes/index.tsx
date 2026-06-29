@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const sportsVideo = "src/assets/qvzrlywi6vlviaanxvpg.mp4";
-const cvAsset = "src/assets/Muhammad_Hammad_Bashir_CV.pdf";
-const portrait = "src/assets/my_image.png";
-const projMovers = "src/assets/image_original.png";
-const projDrone = "src/assets/image_original2.png";
-const projNeuro = "src/assets/image_original3.png";
+import sportsVideo from "@/assets/qvzrlywi6vlviaanxvpg.mp4";
+import cvAsset from "@/assets/Muhammad_Hammad_Bashir_CV.pdf";
+import portrait from "@/assets/my_image.png";
+import projMovers from "@/assets/image_original.png";
+import projDrone from "@/assets/image_original2.png";
+import projNeuro from "@/assets/image_original3.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -95,6 +95,20 @@ const TESTIMONIALS = [
     body: "Muhammad managed the full lifecycle of our drone & satellite AI platform — annotation, training, optimization, deployment and support. Deep technical expertise, professionalism and excellent communication.",
     site: "https://app.tmgdronity.com",
   },
+  {
+    name: "Dr. Azad Kabir",
+    role: "Founder, Doctor AI",
+    body: "Bashir is one of the best professionals I have worked with. He is extremely friendly, collaborative, and a true team player. What stands out most is his initiative and adaptability. Despite his primary specialization being Computer Vision, he proactively learned PHP when assigned tasks outside his core domain and delivered them with ownership and commitment. He contributed significantly to our AI healthcare initiatives, including LLM-powered disease diagnosis systems, patient fall-alert detection, and remote patient monitoring solutions. His willingness to learn new technologies and consistently deliver results made him an invaluable contributor to our team. I highly recommend Muhammad Hammad Bashir for AI, Machine Learning, Computer Vision, and Healthcare AI projects.
+",
+    site: "https://www.ddxrx.net/",
+    linkedin: "https://www.linkedin.com/in/azadkabir/",
+  },
+  {
+    name: "Hassan Karim",
+    role: "Vice President, Comerica Bank",
+    body: "Muhammad Hammad Bashir assisted me with a startup initiative focused on Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and custom knowledge systems built on extensive datasets from the oil and gas industry. He demonstrated strong expertise in AI architecture, data processing, model deployment, and enterprise AI solutions. His ability to understand complex business requirements and translate them into practical AI applications was instrumental to the project's success. I highly recommend Hammad for AI, LLM, RAG, and enterprise-scale machine learning initiatives.",
+    linkedin: "https://www.linkedin.com/in/hassankarimcissp/",
+  },
 ];
 
 function Portfolio() {

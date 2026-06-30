@@ -79,21 +79,21 @@ const TESTIMONIALS = [
   {
     name: "Garry Doel",
     role: "Co-Founder, CreativeScore AI",
-    body: "Hammad has consistently demonstrated exceptional expertise in ML, Computer Vision and AI deployment. He handled complex image/video datasets and delivered ad-scoring, video emotion and recommendation pipelines — while significantly reducing our GPU infrastructure cost. I confidently recommend him for any AI engineering role.",
+    body: "Muhammad Hammad Bashir has been working with us for approximately three years. Throughout this time, he has consistently demonstrated exceptional expertise in Machine Learning, Computer Vision, and AI deployment. Hammad successfully handled complex image and video datasets and delivered advanced AI pipelines for advertisement scoring, video emotion analysis, and intelligent recommendation systems. One of his strongest qualities is his ability to balance performance and cost, helping us significantly reduce infrastructure expenses by identifying and implementing efficient GPU solutions. His technical knowledge, problem-solving skills, and commitment to delivering high-quality results make him a valuable asset to any AI-focused organization. I would confidently recommend Hammad for any Machine Learning, Computer Vision, or AI Engineering role.",
     site: "https://www.creativescore.ai",
     linkedin: "https://www.linkedin.com/in/garrydoel/",
   },
   {
     name: "Vincent",
     role: "Founder, Sportunity",
-    body: "Hammad played a critical role in our sports analytics: player & ball detection, automated match reports, serve & volley event detection. Strong technical expertise and the ability to transform research into production-ready solutions.",
+    body: "Muhammad Hammad Bashir played a critical role in the development of multiple sports analytics and computer vision solutions for Sportunity. His work included player detection, player tracking, ball detection, automated match report generation, serve and volley event detection, and extensive research and experimentation to improve model performance and accuracy. Hammad consistently demonstrated strong technical expertise, attention to detail, and the ability to transform research concepts into production-ready solutions. His contributions significantly advanced our sports analytics capabilities. I would highly recommend him for any Computer Vision, Sports Analytics, or AI Engineering project.",
     site: "https://sportunity.com/",
   },
   {
     name: "Zlatica",
     role: "Team Lead, TMG Dronity",
-    body: "Muhammad managed the full lifecycle of our drone & satellite AI platform — annotation, training, optimization, deployment and support. Deep technical expertise, professionalism and excellent communication.",
-    site: "https://app.tmgdronity.com",
+    body: "We had the opportunity to work with Muhammad on the development of a comprehensive AI platform and toolset. He managed the entire lifecycle of the project, including data annotation, model training, optimization, deployment, and production support. Muhammad consistently demonstrated deep technical expertise, professionalism, and excellent communication skills. He proactively identified challenges and proposed effective solutions that resulted in outstanding outcomes. His ability to manage end-to-end AI projects makes him an excellent choice for organizations seeking a highly capable Machine Learning and Computer Vision Engineer. I highly recommend Muhammad Hammad Bashir for any AI, Machine Learning, Computer Vision, or Generative AI project. Alex macdnonal we were following some platforms swingvision.ai which is definitely huge inidstruy we tried to some thing similar in tennis and amzed by hammad research in tracking of ball and 3d consturction and speed of alogrthm for people working o challengeing work he is indeed good, one thing I noticed he did not eager or greed about payment instead take responsbility of work",
+    site: "https://Soopa.ai",
   },
   {
     name: "Dr. Azad Kabir",

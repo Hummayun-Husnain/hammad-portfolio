@@ -98,8 +98,7 @@ const TESTIMONIALS = [
   {
     name: "Dr. Azad Kabir",
     role: "Founder, Doctor AI",
-    body: "Bashir is one of the best professionals I have worked with. He is extremely friendly, collaborative, and a true team player. What stands out most is his initiative and adaptability. Despite his primary specialization being Computer Vision, he proactively learned PHP when assigned tasks outside his core domain and delivered them with ownership and commitment. He contributed significantly to our AI healthcare initiatives, including LLM-powered disease diagnosis systems, patient fall-alert detection, and remote patient monitoring solutions. His willingness to learn new technologies and consistently deliver results made him an invaluable contributor to our team. I highly recommend Muhammad Hammad Bashir for AI, Machine Learning, Computer Vision, and Healthcare AI projects.
-",
+    body: "Muhammad Hammad Bashir is one of the best professionals I have worked with. He is extremely friendly, collaborative, and a true team player. What stands out most is his initiative and adaptability. Despite his primary specialization being Computer Vision, he proactively learned PHP when assigned tasks outside his core domain and delivered them with ownership and commitment. He contributed significantly to our AI healthcare initiatives, including LLM-powered disease diagnosis systems, patient fall-alert detection, and remote patient monitoring solutions. His willingness to learn new technologies and consistently deliver results made him an invaluable contributor to our team. I highly recommend Muhammad Hammad Bashir for AI, Machine Learning, Computer Vision, and Healthcare AI projects.",
     site: "https://www.ddxrx.net/",
     linkedin: "https://www.linkedin.com/in/azadkabir/",
   },

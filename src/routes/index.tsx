@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import sportsVideo from "@/assets/qvzrlywi6vlviaanxvpg.mp4";
 import cvAsset from "@/assets/Muhammad_Hammad_Bashir_CV.pdf";
-import portrait from "@/assets/my_image.png";
+import portrait from "@/assets/hammad_pic.jpg";
 import projMovers from "@/assets/image_original.png";
 import projDrone from "@/assets/image_original2.png";
 import projNeuro from "@/assets/image_original3.png";

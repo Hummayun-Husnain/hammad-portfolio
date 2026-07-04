@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import soopaVideo from "@/assets/ABC_trajectory.mp4";
+import soopaVideo from "@/assets/ABC_trajectory_web.mp4";
 import sportsVideo from "@/assets/qvzrlywi6vlviaanxvpg.mp4";
 import cvAsset from "@/assets/Muhammad_Hammad_Bashir_CV.pdf";
 import portrait from "@/assets/hammad_pic.jpg";
@@ -50,7 +50,7 @@ const PROJECTS = [
   },
   {
     video: soopaVideo,
-    title: "Soopa.ai — AI Tennis Analytics from a Single iPhone Feed",
+    title: "Soopa.ai — AI Tennis Analytics Platform",
     tag: "Sports AI · Tennis",
     role: "Computer Vision Engineer",
     body: "AI tennis analytics platform for amateur and semi-pro matches, producing production-grade match intelligence from a single consumer iPhone feed (1280×720, static camera, uncontrolled outdoor/indoor courts) — no expensive multi-camera stadium rig required.\n\nCourt calibration: migrated from a manual 14-point homography (skew, unstable depth) to a hybrid AI-assisted 20-keypoint layout — deep-learning keypoint proposals refined by human operators for exact geometric consistency across lens placements.\n\nPlayer tracking: custom YOLOv8m trained on 4,500 annotated images across varied courts, lighting and kits — >90% precision with strong temporal stability.\n\nBall tracking (core engine): TrackNetV5 with Motion Direction Decoupling (signed polarity fields preserving trajectory direction) and a Residual-Driven Spatio-Temporal Refinement Transformer head. F1 0.9859 / accuracy 0.9733 on the public TrackNetV2 benchmark, and ~96% ball-tracking accuracy at 45 FPS on commercial GPUs in real amateur footage — surviving deep racket occlusions, net transitions and motion blur where TrackNetV1–V4, ByteTrack and Kalman-based trackers drift.\n\nEvent analytics: release-point detection, bounce localization from vertical velocity inversions (millimeter tolerance), and stroke classification (topspin, slice, volley, serve, smash). 3D uplift converts monocular 2D coordinates into world (X, Y, Z) using court scale anchors — true ball speed, flight arcs, net clearance, launch/landing angles. Automated JSON/CSV telemetry export.",

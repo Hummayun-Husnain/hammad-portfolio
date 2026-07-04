@@ -27,7 +27,7 @@ const LINKS = {
   github: "https://github.com/MuhammadHammadBashir",
   upwork: "https://www.upwork.com/freelancers/hammad535",
   fiverr: "https://www.fiverr.com/mumtaz535/",
-  cv: cvAsset.url,
+  cv: cvAsset,
 };
 
 const SERVICES = [
@@ -41,7 +41,7 @@ const SERVICES = [
 
 const PROJECTS = [
   {
-    video: sportsVideo.url,
+    video: sportsVideo,
     title: "Real-Time Multi-Camera Sports Vision System",
     tag: "Sports AI · Production",
     role: "Computer Vision Engineer",
@@ -49,7 +49,7 @@ const PROJECTS = [
     stack: ["YOLOv8", "ByteTrack", "TrackNet", "ONNX", "TensorRT"],
   },
   {
-    video: soopaVideo.url,
+    video: soopaVideo,
     title: "Soopa.ai — AI Tennis Analytics from a Single iPhone Feed",
     tag: "Sports AI · Tennis",
     role: "Computer Vision Engineer",

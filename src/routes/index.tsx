@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import soopaVideo from "@/assets/ABC-trajectory.mp4";
 import sportsVideo from "@/assets/qvzrlywi6vlviaanxvpg.mp4";
 import cvAsset from "@/assets/Muhammad_Hammad_Bashir_CV.pdf";
 import portrait from "@/assets/hammad_pic.jpg";
@@ -10,7 +11,7 @@ import projNeuro from "@/assets/image_original3.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muhammad Hammad Bashir — portfolio" },
+      { title: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
       { name: "description", content: "Computer Vision Engineer (5+ yrs) building real-time sports AI, multi-camera video intelligence, and multimodal LLM systems. Available for consulting." },
       { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & Sports AI" },
       { property: "og:description", content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI." },
@@ -26,7 +27,7 @@ const LINKS = {
   github: "https://github.com/MuhammadHammadBashir",
   upwork: "https://www.upwork.com/freelancers/hammad535",
   fiverr: "https://www.fiverr.com/mumtaz535/",
-  cv: cvAsset,
+  cv: cvAsset.url,
 };
 
 const SERVICES = [
@@ -40,12 +41,20 @@ const SERVICES = [
 
 const PROJECTS = [
   {
-    video: sportsVideo,
+    video: sportsVideo.url,
     title: "Real-Time Multi-Camera Sports Vision System",
     tag: "Sports AI · Production",
     role: "Computer Vision Engineer",
     body: "Real-time sports CV system on live HIKvision RTSP feeds: detect, track and analyze players, balls and game events. YOLOv8m + ByteTrack + TrackNet for low-latency detection and tracking, optimized via ONNX and TensorRT. Custom algorithms handle ball interpolation, bounce detection, speed/angle/acceleration estimation, polygon-based basket/goal validation and net movement analysis. Multi-camera sync enables accurate event logging, player identification and automatic highlight generation — an AI coach for match analysis.",
     stack: ["YOLOv8", "ByteTrack", "TrackNet", "ONNX", "TensorRT"],
+  },
+  {
+    video: soopaVideo.url,
+    title: "Soopa.ai — AI Tennis Analytics from a Single iPhone Feed",
+    tag: "Sports AI · Tennis",
+    role: "Computer Vision Engineer",
+    body: "AI tennis analytics platform for amateur and semi-pro matches, producing production-grade match intelligence from a single consumer iPhone feed (1280×720, static camera, uncontrolled outdoor/indoor courts) — no expensive multi-camera stadium rig required.\n\nCourt calibration: migrated from a manual 14-point homography (skew, unstable depth) to a hybrid AI-assisted 20-keypoint layout — deep-learning keypoint proposals refined by human operators for exact geometric consistency across lens placements.\n\nPlayer tracking: custom YOLOv8m trained on 4,500 annotated images across varied courts, lighting and kits — >90% precision with strong temporal stability.\n\nBall tracking (core engine): TrackNetV5 with Motion Direction Decoupling (signed polarity fields preserving trajectory direction) and a Residual-Driven Spatio-Temporal Refinement Transformer head. F1 0.9859 / accuracy 0.9733 on the public TrackNetV2 benchmark, and ~96% ball-tracking accuracy at 45 FPS on commercial GPUs in real amateur footage — surviving deep racket occlusions, net transitions and motion blur where TrackNetV1–V4, ByteTrack and Kalman-based trackers drift.\n\nEvent analytics: release-point detection, bounce localization from vertical velocity inversions (millimeter tolerance), and stroke classification (topspin, slice, volley, serve, smash). 3D uplift converts monocular 2D coordinates into world (X, Y, Z) using court scale anchors — true ball speed, flight arcs, net clearance, launch/landing angles. Automated JSON/CSV telemetry export.",
+    stack: ["TrackNetV5", "YOLOv8m", "MDD + R-STR", "3D Uplift", "45 FPS · 96%"],
   },
   {
     img: projMovers,
@@ -79,34 +88,33 @@ const TESTIMONIALS = [
   {
     name: "Garry Doel",
     role: "Co-Founder, CreativeScore AI",
-    body: "Muhammad Hammad Bashir has been working with us for approximately three years. Throughout this time, he has consistently demonstrated exceptional expertise in Machine Learning, Computer Vision, and AI deployment. Hammad successfully handled complex image and video datasets and delivered advanced AI pipelines for advertisement scoring, video emotion analysis, and intelligent recommendation systems. One of his strongest qualities is his ability to balance performance and cost, helping us significantly reduce infrastructure expenses by identifying and implementing efficient GPU solutions. His technical knowledge, problem-solving skills, and commitment to delivering high-quality results make him a valuable asset to any AI-focused organization. I would confidently recommend Hammad for any Machine Learning, Computer Vision, or AI Engineering role.",
+    body: "Muhammad Hammad Bashir has been working with us for approximately three years. Throughout this time, he has consistently demonstrated exceptional expertise in Machine Learning, Computer Vision, and AI deployment.\n\nHammad successfully handled complex image and video datasets and delivered advanced AI pipelines for advertisement scoring, video emotion analysis, and intelligent recommendation systems. One of his strongest qualities is his ability to balance performance and cost, helping us significantly reduce infrastructure expenses by identifying and implementing efficient GPU solutions.\n\nHis technical knowledge, problem-solving skills, and commitment to delivering high-quality results make him a valuable asset to any AI-focused organization. I would confidently recommend Hammad for any Machine Learning, Computer Vision, or AI Engineering role.",
     site: "https://www.creativescore.ai",
     linkedin: "https://www.linkedin.com/in/garrydoel/",
   },
   {
-    name: "Vincent",
-    role: "Founder, Sportunity",
-    body: "Muhammad Hammad Bashir played a critical role in the development of multiple sports analytics and computer vision solutions for Sportunity. His work included player detection, player tracking, ball detection, automated match report generation, serve and volley event detection, and extensive research and experimentation to improve model performance and accuracy. Hammad consistently demonstrated strong technical expertise, attention to detail, and the ability to transform research concepts into production-ready solutions. His contributions significantly advanced our sports analytics capabilities. I would highly recommend him for any Computer Vision, Sports Analytics, or AI Engineering project.",
-    site: "https://sportunity.com/",
-  },
-  {
-    name: "Zlatica",
-    role: "Team Lead, TMG Dronity",
-    body: "We had the opportunity to work with Muhammad on the development of a comprehensive AI platform and toolset. He managed the entire lifecycle of the project, including data annotation, model training, optimization, deployment, and production support. Muhammad consistently demonstrated deep technical expertise, professionalism, and excellent communication skills. He proactively identified challenges and proposed effective solutions that resulted in outstanding outcomes. His ability to manage end-to-end AI projects makes him an excellent choice for organizations seeking a highly capable Machine Learning and Computer Vision Engineer. I highly recommend Muhammad Hammad Bashir for any AI, Machine Learning, Computer Vision, or Generative AI project. Alex macdnonal we were following some platforms swingvision.ai which is definitely huge inidstruy we tried to some thing similar in tennis and amzed by hammad research in tracking of ball and 3d consturction and speed of alogrthm for people working o challengeing work he is indeed good, one thing I noticed he did not eager or greed about payment instead take responsbility of work",
-    site: "https://Soopa.ai",
-  },
-  {
     name: "Dr. Azad Kabir",
     role: "Founder, Doctor AI",
-    body: "Muhammad Hammad Bashir is one of the best professionals I have worked with. He is extremely friendly, collaborative, and a true team player. What stands out most is his initiative and adaptability. Despite his primary specialization being Computer Vision, he proactively learned PHP when assigned tasks outside his core domain and delivered them with ownership and commitment. He contributed significantly to our AI healthcare initiatives, including LLM-powered disease diagnosis systems, patient fall-alert detection, and remote patient monitoring solutions. His willingness to learn new technologies and consistently deliver results made him an invaluable contributor to our team. I highly recommend Muhammad Hammad Bashir for AI, Machine Learning, Computer Vision, and Healthcare AI projects.",
+    body: "Bashir is one of the best professionals I have worked with. He is extremely friendly, collaborative, and a true team player.\n\nWhat stands out most is his initiative and adaptability. Despite his primary specialization being Computer Vision, he proactively learned PHP when assigned tasks outside his core domain and delivered them with ownership and commitment.\n\nHe contributed significantly to our AI healthcare initiatives, including LLM-powered disease diagnosis systems, patient fall-alert detection, and remote patient monitoring solutions. His willingness to learn new technologies and consistently deliver results made him an invaluable contributor to our team.\n\nI highly recommend Muhammad Hammad Bashir for AI, Machine Learning, Computer Vision, and Healthcare AI projects.",
     site: "https://www.ddxrx.net/",
     linkedin: "https://www.linkedin.com/in/azadkabir/",
   },
   {
+    name: "Vincent",
+    role: "Founder, Sportunity",
+    body: "Muhammad Hammad Bashir played a critical role in the development of multiple sports analytics and computer vision solutions for Sportunity.\n\nHis work included player detection, player tracking, ball detection, automated match report generation, serve and volley event detection, and extensive research and experimentation to improve model performance and accuracy.\n\nHammad consistently demonstrated strong technical expertise, attention to detail, and the ability to transform research concepts into production-ready solutions. His contributions significantly advanced our sports analytics capabilities.\n\nI would highly recommend him for any Computer Vision, Sports Analytics, or AI Engineering project.",
+    site: "https://sportunity.com/",
+  },
+  {
     name: "Hassan Karim",
     role: "Vice President, Comerica Bank",
-    body: "Muhammad Hammad Bashir assisted me with a startup initiative focused on Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and custom knowledge systems built on extensive datasets from the oil and gas industry. He demonstrated strong expertise in AI architecture, data processing, model deployment, and enterprise AI solutions. His ability to understand complex business requirements and translate them into practical AI applications was instrumental to the project's success. I highly recommend Hammad for AI, LLM, RAG, and enterprise-scale machine learning initiatives.",
+    body: "Muhammad Hammad Bashir assisted me with a startup initiative focused on Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and custom knowledge systems built on extensive datasets from the oil and gas industry.\n\nHe demonstrated strong expertise in AI architecture, data processing, model deployment, and enterprise AI solutions. His ability to understand complex business requirements and translate them into practical AI applications was instrumental to the project's success.\n\nI highly recommend Hammad for AI, LLM, RAG, and enterprise-scale machine learning initiatives.",
     linkedin: "https://www.linkedin.com/in/hassankarimcissp/",
+  },
+  {
+    name: "Zlatica",
+    role: "Team Lead",
+    body: "We had the opportunity to work with Muhammad on the development of a comprehensive AI platform and toolset. He managed the entire lifecycle of the project, including data annotation, model training, optimization, deployment, and production support.\n\nMuhammad consistently demonstrated deep technical expertise, professionalism, and excellent communication skills. He proactively identified challenges and proposed effective solutions that resulted in outstanding outcomes.\n\nHis ability to manage end-to-end AI projects makes him an excellent choice for organizations seeking a highly capable Machine Learning and Computer Vision Engineer.\n\nI highly recommend Muhammad Hammad Bashir for any AI, Machine Learning, Computer Vision, or Generative AI project.",
   },
 ];
 
@@ -268,7 +276,7 @@ function Projects() {
               <div className="p-6">
                 <div className="font-mono text-xs text-accent">{p.role}</div>
                 <h3 className="mt-1 text-xl font-semibold">{p.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.body}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{p.body}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
                     <span key={s} className="font-mono text-[11px] rounded-md bg-surface-2 border border-border px-2 py-1 text-muted-foreground">{s}</span>
@@ -305,7 +313,7 @@ function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <figure key={t.name} className="glass-card rounded-2xl p-6 flex flex-col">
               <QuoteIcon />
-              <blockquote className="mt-4 text-sm text-foreground/90 leading-relaxed flex-1">{t.body}</blockquote>
+              <blockquote className="mt-4 text-sm text-foreground/90 leading-relaxed flex-1 whitespace-pre-line">{t.body}</blockquote>
               <figcaption className="mt-6 pt-5 border-t border-border/60">
                 <div className="font-semibold">{t.name}</div>
                 <div className="text-xs text-muted-foreground">{t.role}</div>
@@ -340,7 +348,7 @@ function Contact() {
           <div className="relative">
             <SectionLabel num="05" title="Let's build" />
             <h2 className="mt-6 text-4xl md:text-5xl font-semibold leading-tight">
-              Have a problem worth <span className="text-gradient">solving?</span>
+              Have a vision problem worth <span className="text-gradient">solving?</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
               From a quick consult to a full production system — based in Punjab, Pakistan, working with teams worldwide.

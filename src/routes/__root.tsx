@@ -61,7 +61,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
       { name: "description", content: "Computer Vision Engineer building real-time sports AI, multimodal LLM, and video intelligence systems. 5+ years across YOLO, MediaPipe, ByteTrack, and MLOps." },
       { name: "author", content: "Muhammad Hammad Bashir" },
-      { property: "og:title", content: "Muhammad Hammad Bashir — portfolio" },
+      { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
       { property: "og:description", content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI. Available for consulting and contract work." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

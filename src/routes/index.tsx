@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import soopaVideo from "@/assets/ABC-trajectory.mp4";
+import soopaVideo from "@/assets/ABC_trajectory.mp4";
 import sportsVideo from "@/assets/qvzrlywi6vlviaanxvpg.mp4";
 import cvAsset from "@/assets/Muhammad_Hammad_Bashir_CV.pdf";
 import portrait from "@/assets/hammad_pic.jpg";

@@ -39,6 +39,55 @@ const SERVICES = [
   { title: "MLOps & Deployment", body: "ONNX, TensorRT, FastAPI, Docker, MLflow, DVC, AWS / Azure / Runpod, serverless GPU." },
 ];
 
+const EXPERIENCE = [
+  {
+    period: "June 2025 – Present",
+    role: "Computer Vision Engineer (Sports AI)",
+    company: "Sportunity / Sports Analytics Platform",
+    points: [
+      "Built a real-time sports computer vision system for soccer, tennis, and volleyball using live RTSP (HIKvision) camera feeds.",
+      "Implemented YOLOv8m + ByteTrack + TrackNet for player, ball detection, and multi-object tracking under low-latency constraints.",
+      "Developed event detection pipelines including ball bounce detection, trajectory interpolation, speed/acceleration estimation, and shot classification.",
+      "Designed multi-camera synchronization system for cross-angle tracking, enabling accurate match reconstruction and highlight generation.",
+      "Integrated MediaPipe pose estimation for biomechanics analysis (jump, sprint, movement efficiency).",
+      "Optimized inference pipeline using ONNX + TensorRT for edge and GPU deployment.",
+      "Built automated AI coaching system generating real-time analytics dashboards for coaches and athletes.",
+    ],
+  },
+  {
+    period: "June 2023 – June 2025",
+    role: "AI Consultant (Computer Vision & Generative AI)",
+    company: "Markify / CreativeScore AI, London, UK",
+    points: [
+      "Developed neuromarketing AI systems analyzing ad effectiveness using computer vision and multi-modal signals (image, video, audio, and text).",
+      "Built attention prediction and saliency mapping models to identify high-impact visual regions in advertisements.",
+      "Designed emotion recognition pipelines for viewer reaction analysis using deep CNNs and transformer-based encoders.",
+      "Implemented Pix2PixHD, GAN-based augmentation, and diffusion-based creative optimization for ad generation.",
+      "Built end-to-end FastAPI + AWS + Azure CI/CD pipelines for scalable deployment.",
+      "Delivered creative intelligence platform (creativescore.ai) for optimizing marketing performance and engagement.",
+    ],
+  },
+  {
+    period: "Sept 2021 – June 2023",
+    role: "Research Assistant (AI & Computer Vision)",
+    company: "LUMS / AI & Big Data Centre, Pakistan",
+    points: [
+      "Developed ML-based livestock health monitoring systems using image classification and sensor data.",
+      "Worked on flood and drought prediction using LSTM and RNN-based time-series models.",
+      "Built agricultural AI systems for crop monitoring and yield prediction using satellite imagery.",
+      "Implemented classical ML pipelines using Scikit-learn, XGBoost, Flask, and SQL-based deployments.",
+    ],
+  },
+  {
+    period: "Aug 2021 – Jul 2023",
+    role: "Freelance ML Engineer",
+    company: "Upwork & Fiverr",
+    points: [
+      "Delivered end-to-end ML and computer vision solutions for global clients in sports analytics, document AI, and geospatial intelligence.",
+    ],
+  },
+];
+
 const PROJECTS = [
   {
     video: sportsVideo,
@@ -50,7 +99,7 @@ const PROJECTS = [
   },
   {
     video: soopaVideo,
-    title: "Soopa.ai — AI Tennis Analytics Platform",
+    title: "Soopa.ai — AI Tennis Analytics from a Single iPhone Feed",
     tag: "Sports AI · Tennis",
     role: "Computer Vision Engineer",
     body: "AI tennis analytics platform for amateur and semi-pro matches, producing production-grade match intelligence from a single consumer iPhone feed (1280×720, static camera, uncontrolled outdoor/indoor courts) — no expensive multi-camera stadium rig required.\n\nCourt calibration: migrated from a manual 14-point homography (skew, unstable depth) to a hybrid AI-assisted 20-keypoint layout — deep-learning keypoint proposals refined by human operators for exact geometric consistency across lens placements.\n\nPlayer tracking: custom YOLOv8m trained on 4,500 annotated images across varied courts, lighting and kits — >90% precision with strong temporal stability.\n\nBall tracking (core engine): TrackNetV5 with Motion Direction Decoupling (signed polarity fields preserving trajectory direction) and a Residual-Driven Spatio-Temporal Refinement Transformer head. F1 0.9859 / accuracy 0.9733 on the public TrackNetV2 benchmark, and ~96% ball-tracking accuracy at 45 FPS on commercial GPUs in real amateur footage — surviving deep racket occlusions, net transitions and motion blur where TrackNetV1–V4, ByteTrack and Kalman-based trackers drift.\n\nEvent analytics: release-point detection, bounce localization from vertical velocity inversions (millimeter tolerance), and stroke classification (topspin, slice, volley, serve, smash). 3D uplift converts monocular 2D coordinates into world (X, Y, Z) using court scale anchors — true ball speed, flight arcs, net clearance, launch/landing angles. Automated JSON/CSV telemetry export.",
@@ -125,6 +174,7 @@ function Portfolio() {
       <Hero />
       <About />
       <Services />
+      <Experience />
       <Projects />
 
       <Testimonials />
@@ -138,6 +188,7 @@ function Nav() {
   const items = [
     ["About", "#about"],
     ["Services", "#services"],
+    ["Experience", "#experience"],
     ["Projects", "#projects"],
     ["Testimonials", "#testimonials"],
     ["Contact", "#contact"],
@@ -254,11 +305,39 @@ function Services() {
   );
 }
 
+function Experience() {
+  return (
+    <section id="experience" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionLabel num="03" title="Professional experience" />
+        <div className="mt-12 relative">
+          <div className="absolute left-3 md:left-4 top-2 bottom-2 w-px bg-border" aria-hidden />
+          <ol className="space-y-10">
+            {EXPERIENCE.map((e) => (
+              <li key={e.role + e.period} className="relative pl-10 md:pl-14">
+                <span className="absolute left-1.5 md:left-2.5 top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background" aria-hidden />
+                <div className="font-mono text-xs text-primary">{e.period}</div>
+                <h3 className="mt-1 text-xl font-semibold">{e.role}</h3>
+                <div className="text-sm text-accent">{e.company}</div>
+                <ul className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed list-disc pl-5">
+                  {e.points.map((p) => (
+                    <li key={p}>{p}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionLabel num="03" title="Selected projects" />
+        <SectionLabel num="04" title="Selected projects" />
         <p className="mt-4 text-muted-foreground max-w-2xl">
           A sample of production systems shipped for clients on Upwork, Fiverr and direct engagements.
         </p>
@@ -308,7 +387,7 @@ function Testimonials() {
   return (
     <section id="testimonials" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <SectionLabel num="04" title="Client testimonials" />
+        <SectionLabel num="05" title="Client testimonials" />
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {TESTIMONIALS.map((t) => (
             <figure key={t.name} className="glass-card rounded-2xl p-6 flex flex-col">
@@ -346,7 +425,7 @@ function Contact() {
           <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary/20 blur-3xl" />
           <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-accent/15 blur-3xl" />
           <div className="relative">
-            <SectionLabel num="05" title="Let's build" />
+            <SectionLabel num="06" title="Let's build" />
             <h2 className="mt-6 text-4xl md:text-5xl font-semibold leading-tight">
               Have a vision problem worth <span className="text-gradient">solving?</span>
             </h2>

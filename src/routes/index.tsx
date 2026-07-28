@@ -127,7 +127,7 @@ const PROJECTS = [
     title: "AI in Neuromarketing — CreativeScore",
     tag: "Machine Learning · Production",
     role: "Machine Learning Engineer",
-    body: "Leveraged AI and ML to enhance behavioural-science analyses and design strategies at creativescore.ai — increasing user attraction for videos and images through attention prediction, scoring and creative optimization.",
+    body: "Developed neuromarketing AI systems analyzing ad effectiveness using computer vision and multi-modal signals (image, video, audio, and text).\nBuilt attention prediction and saliency mapping models to identify high-impact visual regions in advertisements.\nDesigned emotion recognition pipelines for viewer reaction analysis using deep CNNs and transformer-based encoders.\nImplemented Pix2PixHD, GAN-based augmentation, and diffusion-based creative optimization for ad generation.\nBuilt end-to-end FastAPI + AWS + Azure CI/CD pipelines for scalable deployment.\nDelivered creative intelligence platform (creativescore.ai) for optimizing marketing performance and engagement.",
     stack: ["Deep Learning", "Machine Learning", "Computer Vision", "AI App Development", "Model Deployment"],
     link: "https://www.creativescore.ai/",
   },
@@ -427,7 +427,7 @@ function Contact() {
           <div className="relative">
             <SectionLabel num="06" title="Let's build" />
             <h2 className="mt-6 text-4xl md:text-5xl font-semibold leading-tight">
-              Have a vision problem worth <span className="text-gradient">solving?</span>
+              Have an ML problem worth <span className="text-gradient">solving?</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
               From a quick consult to a full production system — based in Punjab, Pakistan, working with teams worldwide.

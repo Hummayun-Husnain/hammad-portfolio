@@ -8,13 +8,24 @@ import projMovers from "@/assets/image_original.png";
 import projDrone from "@/assets/image_original2.png";
 import projNeuro from "@/assets/image_original3.png";
 
+import projAtlas from "@/assets/atlas.png";
+import projPetroleum from "@/assets/petroleum.png";
+import projVapi from "@/assets/vapi.png";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
-      { name: "description", content: "Computer Vision Engineer (5+ yrs) building real-time sports AI, multi-camera video intelligence, and multimodal LLM systems. Available for consulting." },
+      {
+        name: "description",
+        content:
+          "Computer Vision Engineer (5+ yrs) building real-time sports AI, multi-camera video intelligence, and multimodal LLM systems. Available for consulting.",
+      },
       { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & Sports AI" },
-      { property: "og:description", content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI." },
+      {
+        property: "og:description",
+        content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI.",
+      },
     ],
   }),
   component: Portfolio,
@@ -31,12 +42,30 @@ const LINKS = {
 };
 
 const SERVICES = [
-  { title: "Computer Vision", body: "YOLOv8, SAM, CLIP, MediaPipe, ByteTrack, DeepSORT, TrackNet. Detection, tracking, pose, segmentation." },
-  { title: "Sports & Video Analytics", body: "Real-time RTSP pipelines, multi-camera sync, event detection, bounce / trajectory / biomechanics." },
-  { title: "Generative & Multimodal AI", body: "LLaMA 3.2, LLaVA, Florence, multimodal RAG, Stable Diffusion + LoRA/QLoRA fine-tuning, ComfyUI." },
-  { title: "LLMs & Agents", body: "GPT, Claude, DeepSeek, LangChain, CrewAI. RAG systems, fine-tuning, prompt engineering." },
-  { title: "Geospatial AI", body: "Satellite + drone imagery (RGB / multispectral / hyperspectral), QGIS, GDAL, rasterio, UNet segmentation." },
-  { title: "MLOps & Deployment", body: "ONNX, TensorRT, FastAPI, Docker, MLflow, DVC, AWS / Azure / Runpod, serverless GPU." },
+  {
+    title: "Computer Vision",
+    body: "YOLOv8, SAM, CLIP, MediaPipe, ByteTrack, DeepSORT, TrackNet. Detection, tracking, pose, segmentation.",
+  },
+  {
+    title: "Sports & Video Analytics",
+    body: "Real-time RTSP pipelines, multi-camera sync, event detection, bounce / trajectory / biomechanics.",
+  },
+  {
+    title: "Generative & Multimodal AI",
+    body: "LLaMA 3.2, LLaVA, Florence, multimodal RAG, Stable Diffusion + LoRA/QLoRA fine-tuning, ComfyUI.",
+  },
+  {
+    title: "LLMs & Agents",
+    body: "GPT, Claude, DeepSeek, LangChain, CrewAI. RAG systems, fine-tuning, prompt engineering.",
+  },
+  {
+    title: "Geospatial AI",
+    body: "Satellite + drone imagery (RGB / multispectral / hyperspectral), QGIS, GDAL, rasterio, UNet segmentation.",
+  },
+  {
+    title: "MLOps & Deployment",
+    body: "ONNX, TensorRT, FastAPI, Docker, MLflow, DVC, AWS / Azure / Runpod, serverless GPU.",
+  },
 ];
 
 const EXPERIENCE = [
@@ -128,8 +157,55 @@ const PROJECTS = [
     tag: "Machine Learning · Production",
     role: "Machine Learning Engineer",
     body: "Developed neuromarketing AI systems analyzing ad effectiveness using computer vision and multi-modal signals (image, video, audio, and text).\nBuilt attention prediction and saliency mapping models to identify high-impact visual regions in advertisements.\nDesigned emotion recognition pipelines for viewer reaction analysis using deep CNNs and transformer-based encoders.\nImplemented Pix2PixHD, GAN-based augmentation, and diffusion-based creative optimization for ad generation.\nBuilt end-to-end FastAPI + AWS + Azure CI/CD pipelines for scalable deployment.\nDelivered creative intelligence platform (creativescore.ai) for optimizing marketing performance and engagement.",
-    stack: ["Deep Learning", "Machine Learning", "Computer Vision", "AI App Development", "Model Deployment"],
+    stack: [
+      "Deep Learning",
+      "Machine Learning",
+      "Computer Vision",
+      "AI App Development",
+      "Model Deployment",
+    ],
     link: "https://www.creativescore.ai/",
+  },
+  {
+    img: projAtlas,
+    title: "Atlas Knowledge Assistant",
+    tag: "AI Engineering · Production",
+    role: "AI / Machine Learning Engineer",
+    body: "Built a production-grade AI knowledge assistant for engineering organizations that converts internal SOPs, runbooks, and technical documentation into a searchable, auditable knowledge system.\nImplemented a Trigger → Retrieve → Reason → Respond architecture with specialized knowledge and task agents, local TF-IDF retrieval, and Claude/OpenAI model routing.\nIntegrated ClickUp automation to retrieve tasks, resolve linked SOPs, generate grounded responses, post structured comments, and update task status automatically.\nImplemented confidence-based escalation, citation-backed responses, token and cost tracking, and three-tier model routing to optimize accuracy and inference cost.\nBuilt an MCP-native architecture with Hermes Agent integration and a Streamlit interface for Q&A, knowledge-base search, ClickUp workflows, and usage analytics.",
+    stack: [
+      "RAG",
+      "Multi-Agent AI",
+      "LLM Engineering",
+      "MCP",
+      "ClickUp Automation",
+      "Streamlit",
+      "Python",
+    ],
+  },
+  {
+    img: projPetroleum,
+    title: "Petroleum Knowledge Assistant",
+    tag: "Generative AI · RAG",
+    role: "AI / Machine Learning Engineer",
+    body: "Built an enterprise-grade AI knowledge platform for upstream, midstream, and downstream oil & gas organizations to search and reason over large collections of technical documentation.\nDesigned a multi-agent LangGraph workflow consisting of routing, document retrieval, answer generation, and independent verification agents.\nImplemented a RAG pipeline using PostgreSQL with pgvector embeddings to retrieve relevant engineering documents and generate source-grounded responses.\nBuilt automated document ingestion supporting PDF, DOCX, Markdown, HTML, and TXT files with chunking, embeddings, incremental indexing, duplicate detection, and metadata management.\nImplemented citation verification, confidence status, source traceability, API authentication, admin document management, and Docker-based deployment for production-oriented use.",
+    stack: [
+      "RAG",
+      "LangGraph",
+      "Multi-Agent AI",
+      "FastAPI",
+      "PostgreSQL",
+      "pgvector",
+      "OpenAI",
+      "Next.js",
+    ],
+  },
+  {
+    img: projVapi,
+    title: "AI Receptionist",
+    tag: "Voice AI · Production",
+    role: "AI Engineer",
+    body: "Built a production-ready AI voice receptionist for hospital appointment management, enabling patients to schedule, cancel, and retrieve appointments through natural voice conversations.\nIntegrated VAPI as the voice AI layer for real-time speech-to-text, LLM function calling, and text-to-speech interactions.\nDeveloped a FastAPI backend exposing appointment scheduling, cancellation, and lookup APIs connected to a SQLite database through SQLAlchemy.\nBuilt a Streamlit administration dashboard allowing hospital staff to view schedules, manage appointments, and perform manual operations.\nDesigned the complete voice-to-database workflow with REST API integration, Pydantic validation, automatic API documentation, and independent dashboard access.",
+    stack: ["Voice AI", "VAPI", "FastAPI", "LLM Agents", "Streamlit", "SQLAlchemy", "Python"],
   },
 ];
 
@@ -198,14 +274,22 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#top" className="font-display font-semibold tracking-tight">
           <span className="text-gradient">MHB</span>
-          <span className="text-muted-foreground text-sm ml-2 font-mono hidden sm:inline">// computer vision</span>
+          <span className="text-muted-foreground text-sm ml-2 font-mono hidden sm:inline">
+            // computer vision
+          </span>
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           {items.map(([label, href]) => (
-            <a key={href} href={href} className="hover:text-foreground transition-colors">{label}</a>
+            <a key={href} href={href} className="hover:text-foreground transition-colors">
+              {label}
+            </a>
           ))}
         </nav>
-        <a href={LINKS.cv} download className="hidden sm:inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 transition">
+        <a
+          href={LINKS.cv}
+          download
+          className="hidden sm:inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:opacity-90 transition"
+        >
           <DownloadIcon /> Download CV
         </a>
       </div>
@@ -224,24 +308,41 @@ function Hero() {
             Available for work
           </div>
           <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.02]">
-            Muhammad <span className="text-gradient">Hammad</span><br />Bashir
+            Muhammad <span className="text-gradient">Hammad</span>
+            <br />
+            Bashir
           </h1>
           <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-xl">
-            Computer Vision Engineer building real-time sports AI, multi-camera video intelligence and multimodal LLM systems. 5+ years from research to production.
+            Computer Vision Engineer building real-time sports AI, multi-camera video intelligence
+            and multimodal LLM systems. 5+ years from research to production.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition">
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
+            >
               View projects <ArrowIcon />
             </a>
-            <a href={LINKS.cv} download className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition">
+            <a
+              href={LINKS.cv}
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
+            >
               <DownloadIcon /> Download CV
             </a>
-            <a href={LINKS.email} className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition">
+            <a
+              href={LINKS.email}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
+            >
               Get in touch
             </a>
           </div>
           <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-            {[["5+", "Years experience"], ["30+", "Production projects"], ["4", "Global teams"]].map(([n, l]) => (
+            {[
+              ["5+", "Years experience"],
+              ["30+", "Production projects"],
+              ["4", "Global teams"],
+            ].map(([n, l]) => (
               <div key={l}>
                 <dt className="font-display text-3xl text-gradient font-semibold">{n}</dt>
                 <dd className="text-xs text-muted-foreground mt-1">{l}</dd>
@@ -253,10 +354,18 @@ function Hero() {
         <div className="relative">
           <div className="absolute -inset-6 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 blur-3xl" />
           <div className="relative glass-card rounded-2xl overflow-hidden glow-ring">
-            <img src={portrait} alt="Muhammad Hammad Bashir — Computer Vision Engineer" width={896} height={1120} className="w-full h-auto object-cover" />
+            <img
+              src={portrait}
+              alt="Muhammad Hammad Bashir — Computer Vision Engineer"
+              width={896}
+              height={1120}
+              className="w-full h-auto object-cover"
+            />
             <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-background via-background/80 to-transparent">
               <div className="font-mono text-xs text-primary">$ ./detect --realtime</div>
-              <div className="font-mono text-xs text-muted-foreground mt-1">Sports AI · Multimodal · MLOps</div>
+              <div className="font-mono text-xs text-muted-foreground mt-1">
+                Sports AI · Multimodal · MLOps
+              </div>
             </div>
           </div>
         </div>
@@ -271,14 +380,20 @@ function About() {
       <div className="max-w-5xl mx-auto px-6">
         <SectionLabel num="01" title="About" />
         <p className="mt-8 text-xl md:text-2xl leading-relaxed text-foreground/90 font-display">
-          I build <span className="text-gradient">real-time AI systems</span> that ship — across sports analytics, neuromarketing, agriculture, healthcare and multimodal AI.
+          I build <span className="text-gradient">real-time AI systems</span> that ship — across
+          sports analytics, neuromarketing, agriculture, healthcare and multimodal AI.
         </p>
         <div className="mt-6 grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
           <p>
-            Specialized in end-to-end video intelligence: object detection, tracking, pose estimation and event recognition with YOLO, MediaPipe, ByteTrack and modern deep-learning pipelines. Strong focus on low-latency production, multi-camera streaming analytics and scalable MLOps.
+            Specialized in end-to-end video intelligence: object detection, tracking, pose
+            estimation and event recognition with YOLO, MediaPipe, ByteTrack and modern
+            deep-learning pipelines. Strong focus on low-latency production, multi-camera streaming
+            analytics and scalable MLOps.
           </p>
           <p>
-            I take ownership of the full stack — from data pipelines and model fine-tuning through ONNX/TensorRT optimization to FastAPI services on AWS, Azure and serverless GPU. The goal is always the same: a system that holds up under real load, on real video.
+            I take ownership of the full stack — from data pipelines and model fine-tuning through
+            ONNX/TensorRT optimization to FastAPI services on AWS, Azure and serverless GPU. The
+            goal is always the same: a system that holds up under real load, on real video.
           </p>
         </div>
       </div>
@@ -293,7 +408,10 @@ function Services() {
         <SectionLabel num="02" title="What I do" />
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((s, i) => (
-            <article key={s.title} className="glass-card rounded-xl p-6 hover:-translate-y-1 transition-transform">
+            <article
+              key={s.title}
+              className="glass-card rounded-xl p-6 hover:-translate-y-1 transition-transform"
+            >
               <div className="font-mono text-xs text-primary">0{i + 1}</div>
               <h3 className="mt-3 text-xl font-semibold">{s.title}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
@@ -315,7 +433,10 @@ function Experience() {
           <ol className="space-y-10">
             {EXPERIENCE.map((e) => (
               <li key={e.role + e.period} className="relative pl-10 md:pl-14">
-                <span className="absolute left-1.5 md:left-2.5 top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background" aria-hidden />
+                <span
+                  className="absolute left-1.5 md:left-2.5 top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background"
+                  aria-hidden
+                />
                 <div className="font-mono text-xs text-primary">{e.period}</div>
                 <h3 className="mt-1 text-xl font-semibold">{e.role}</h3>
                 <div className="text-sm text-accent">{e.company}</div>
@@ -339,30 +460,64 @@ function Projects() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionLabel num="04" title="Selected projects" />
         <p className="mt-4 text-muted-foreground max-w-2xl">
-          A sample of production systems shipped for clients on Upwork, Fiverr and direct engagements.
+          A sample of production systems shipped for clients on Upwork, Fiverr and direct
+          engagements.
         </p>
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           {PROJECTS.map((p) => (
-            <article key={p.title} className="group glass-card rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform">
+            <article
+              key={p.title}
+              className="group glass-card rounded-2xl overflow-hidden hover:-translate-y-1 transition-transform"
+            >
               <div className="relative aspect-[16/10] overflow-hidden bg-surface-2">
                 {p.video ? (
-                  <video src={p.video} muted loop playsInline autoPlay controls preload="metadata" className="w-full h-full object-cover" />
+                  <video
+                    src={p.video}
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    controls
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
-                  <img src={p.img} alt={p.title} loading="lazy" width={1280} height={800} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img
+                    src={p.img}
+                    alt={p.title}
+                    loading="lazy"
+                    width={1280}
+                    height={800}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 )}
-                <div className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-widest bg-background/70 backdrop-blur border border-border rounded-full px-3 py-1 text-primary pointer-events-none">{p.tag}</div>
+                <div className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-widest bg-background/70 backdrop-blur border border-border rounded-full px-3 py-1 text-primary pointer-events-none">
+                  {p.tag}
+                </div>
               </div>
               <div className="p-6">
                 <div className="font-mono text-xs text-accent">{p.role}</div>
                 <h3 className="mt-1 text-xl font-semibold">{p.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{p.body}</p>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {p.body}
+                </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
-                    <span key={s} className="font-mono text-[11px] rounded-md bg-surface-2 border border-border px-2 py-1 text-muted-foreground">{s}</span>
+                    <span
+                      key={s}
+                      className="font-mono text-[11px] rounded-md bg-surface-2 border border-border px-2 py-1 text-muted-foreground"
+                    >
+                      {s}
+                    </span>
                   ))}
                 </div>
                 {p.link && (
-                  <a href={p.link} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition">
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition"
+                  >
                     Visit live project <ArrowIcon />
                   </a>
                 )}
@@ -371,10 +526,20 @@ function Projects() {
           ))}
         </div>
         <div className="mt-10 flex flex-wrap gap-3 justify-center">
-          <a href={LINKS.upwork} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition">
+          <a
+            href={LINKS.upwork}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition"
+          >
             See full Upwork portfolio <ArrowIcon />
           </a>
-          <a href={LINKS.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition">
+          <a
+            href={LINKS.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition"
+          >
             GitHub <ArrowIcon />
           </a>
         </div>
@@ -392,13 +557,33 @@ function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <figure key={t.name} className="glass-card rounded-2xl p-6 flex flex-col">
               <QuoteIcon />
-              <blockquote className="mt-4 text-sm text-foreground/90 leading-relaxed flex-1 whitespace-pre-line">{t.body}</blockquote>
+              <blockquote className="mt-4 text-sm text-foreground/90 leading-relaxed flex-1 whitespace-pre-line">
+                {t.body}
+              </blockquote>
               <figcaption className="mt-6 pt-5 border-t border-border/60">
                 <div className="font-semibold">{t.name}</div>
                 <div className="text-xs text-muted-foreground">{t.role}</div>
                 <div className="mt-3 flex gap-3 text-xs">
-                  {t.linkedin && <a href={t.linkedin} target="_blank" rel="noreferrer" className="text-primary hover:text-accent">LinkedIn ↗</a>}
-                  {t.site && <a href={t.site} target="_blank" rel="noreferrer" className="text-primary hover:text-accent">Website ↗</a>}
+                  {t.linkedin && (
+                    <a
+                      href={t.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:text-accent"
+                    >
+                      LinkedIn ↗
+                    </a>
+                  )}
+                  {t.site && (
+                    <a
+                      href={t.site}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:text-accent"
+                    >
+                      Website ↗
+                    </a>
+                  )}
                 </div>
               </figcaption>
             </figure>
@@ -430,14 +615,22 @@ function Contact() {
               Have an ML problem worth <span className="text-gradient">solving?</span>
             </h2>
             <p className="mt-4 text-muted-foreground max-w-xl">
-              From a quick consult to a full production system — based in Punjab, Pakistan, working with teams worldwide.
+              From a quick consult to a full production system — based in Punjab, Pakistan, working
+              with teams worldwide.
             </p>
             <div className="mt-10 grid sm:grid-cols-2 gap-3">
               {channels.map((c) => (
-                <a key={c.label} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer"
-                   className="group flex items-center justify-between rounded-xl border border-border bg-surface/60 px-5 py-4 hover:border-primary/60 hover:bg-surface-2 transition">
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={c.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className="group flex items-center justify-between rounded-xl border border-border bg-surface/60 px-5 py-4 hover:border-primary/60 hover:bg-surface-2 transition"
+                >
                   <div>
-                    <div className="text-xs font-mono text-primary uppercase tracking-wider">{c.label}</div>
+                    <div className="text-xs font-mono text-primary uppercase tracking-wider">
+                      {c.label}
+                    </div>
                     <div className="text-sm mt-1">{c.value}</div>
                   </div>
                   <ArrowIcon />
@@ -445,10 +638,17 @@ function Contact() {
               ))}
             </div>
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href={LINKS.cv} download className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition">
+              <a
+                href={LINKS.cv}
+                download
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
+              >
                 <DownloadIcon /> Download CV (PDF)
               </a>
-              <a href={LINKS.email} className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition">
+              <a
+                href={LINKS.email}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm hover:bg-surface-2 transition"
+              >
                 Email me directly
               </a>
             </div>
@@ -465,10 +665,18 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-muted-foreground">
         <div className="font-mono">© {new Date().getFullYear()} Muhammad Hammad Bashir</div>
         <div className="flex gap-5">
-          <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary">LinkedIn</a>
-          <a href={LINKS.github} target="_blank" rel="noreferrer" className="hover:text-primary">GitHub</a>
-          <a href={LINKS.upwork} target="_blank" rel="noreferrer" className="hover:text-primary">Upwork</a>
-          <a href={LINKS.fiverr} target="_blank" rel="noreferrer" className="hover:text-primary">Fiverr</a>
+          <a href={LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary">
+            LinkedIn
+          </a>
+          <a href={LINKS.github} target="_blank" rel="noreferrer" className="hover:text-primary">
+            GitHub
+          </a>
+          <a href={LINKS.upwork} target="_blank" rel="noreferrer" className="hover:text-primary">
+            Upwork
+          </a>
+          <a href={LINKS.fiverr} target="_blank" rel="noreferrer" className="hover:text-primary">
+            Fiverr
+          </a>
         </div>
       </div>
     </footer>
@@ -480,14 +688,26 @@ function SectionLabel({ num, title }: { num: string; title: string }) {
     <div className="flex items-center gap-4">
       <span className="font-mono text-sm text-primary">{num}</span>
       <span className="h-px w-12 bg-primary/50" />
-      <span className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">{title}</span>
+      <span className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground">
+        {title}
+      </span>
     </div>
   );
 }
 
 function ArrowIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
       <path d="M5 12h14M13 5l7 7-7 7" />
     </svg>
   );
@@ -495,7 +715,17 @@ function ArrowIcon() {
 
 function DownloadIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
     </svg>
   );
@@ -503,7 +733,14 @@ function DownloadIcon() {
 
 function QuoteIcon() {
   return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-primary/50" aria-hidden>
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="text-primary/50"
+      aria-hidden
+    >
       <path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V18h6.83v-6.83H5.5a1.67 1.67 0 0 1 1.67-1.67V6zm10 0a5.17 5.17 0 0 0-5.17 5.17V18h6.83v-6.83H15.5a1.67 1.67 0 0 1 1.67-1.67V6z" />
     </svg>
   );

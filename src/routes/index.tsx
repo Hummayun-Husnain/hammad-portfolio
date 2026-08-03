@@ -439,7 +439,7 @@ function About() {
         <p className="mt-8 text-xl md:text-2xl leading-relaxed text-foreground/90 font-display">
           I build <span className="text-gradient">production-ready AI systems</span> that solve
           real-world problems across computer vision, sports analytics, generative AI, multimodal
-          intelligence, and intelligent automation.{" "}
+          intelligence, and AI automation.{" "}
         </p>{" "}
         <div className="mt-6 grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
           {" "}

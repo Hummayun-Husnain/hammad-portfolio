@@ -15,13 +15,13 @@ import projVapi from "@/assets/vapi.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Muhammad Hammad Bashir — Computer Vision & Sports AI Engineer" },
+      { title: "Muhammad Hammad Bashir — AI Systems Engineer" },
       {
         name: "description",
         content:
           "Computer Vision Engineer (5+ yrs) building real-time sports AI, multi-camera video intelligence, and multimodal LLM systems. Available for consulting.",
       },
-      { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & Sports AI" },
+      { property: "og:title", content: "Muhammad Hammad Bashir — Computer Vision & AI Engineer" },
       {
         property: "og:description",
         content: "Real-time vision systems, multi-camera sports analytics, and multimodal AI.",
@@ -43,31 +43,30 @@ const LINKS = {
 
 const SERVICES = [
   {
-    title: "Computer Vision",
-    body: "YOLOv8, SAM, CLIP, MediaPipe, ByteTrack, DeepSORT, TrackNet. Detection, tracking, pose, segmentation.",
+    title: "Computer Vision & Video Intelligence",
+    body: "I build production-grade computer vision systems for detection, tracking, pose estimation, segmentation, and visual understanding using YOLO, OpenCV, MediaPipe, ByteTrack, DeepSORT, TrackNet, SAM, and CLIP.",
   },
   {
-    title: "Sports & Video Analytics",
-    body: "Real-time RTSP pipelines, multi-camera sync, event detection, bounce / trajectory / biomechanics.",
+    title: "Sports AI & Real-Time Analytics",
+    body: "I develop real-time sports intelligence pipelines using live RTSP streams, multi-camera synchronization, player and ball tracking, trajectory analysis, bounce and event detection, shot classification, biomechanics, and automated coaching analytics.",
   },
   {
     title: "Generative & Multimodal AI",
-    body: "LLaMA 3.2, LLaVA, Florence, multimodal RAG, Stable Diffusion + LoRA/QLoRA fine-tuning, ComfyUI.",
+    body: "I develop AI systems that understand and generate content across text, images, video, and audio, including multimodal analysis, visual attention and saliency prediction, emotion recognition, GANs, diffusion models, and intelligent content optimization.",
   },
   {
-    title: "LLMs & Agents",
-    body: "GPT, Claude, DeepSeek, LangChain, CrewAI. RAG systems, fine-tuning, prompt engineering.",
+    title: "LLMs, RAG & AI Agents",
+    body: "I build LLM-powered applications using GPT, Claude, LLaMA, LangChain, and CrewAI, with Retrieval-Augmented Generation, multimodal knowledge assistants, tool-using agents, intelligent workflows, and context-aware reasoning.",
   },
   {
-    title: "Geospatial AI",
-    body: "Satellite + drone imagery (RGB / multispectral / hyperspectral), QGIS, GDAL, rasterio, UNet segmentation.",
+    title: "AI Automation & Intelligent Systems",
+    body: "I automate complex business and operational workflows with AI agents, document and visual understanding, intelligent decision pipelines, human-in-the-loop systems, and API-driven automation that turns manual processes into scalable AI workflows.",
   },
   {
-    title: "MLOps & Deployment",
-    body: "ONNX, TensorRT, FastAPI, Docker, MLflow, DVC, AWS / Azure / Runpod, serverless GPU.",
+    title: "ML Engineering & Production Deployment",
+    body: "I take ML systems from research to production using PyTorch, TensorFlow, FastAPI, Docker, MLflow, DVC, CI/CD, AWS, Azure, ONNX, TensorRT, and serverless GPU infrastructure, with a focus on scalable and low-latency inference.",
   },
 ];
-
 const EXPERIENCE = [
   {
     period: "June 2025 – Present",
@@ -116,6 +115,37 @@ const EXPERIENCE = [
     ],
   },
 ];
+const PROJECT_CATEGORIES = [
+  {
+    number: "01",
+    title: "Computer Vision",
+    description:
+      "Computer vision systems for detection, tracking, segmentation, pose estimation, and real-time video intelligence.",
+    projects: [
+      "Real-Time Multi-Camera Sports Vision System",
+      "Soopa.ai — AI Tennis Analytics",
+      "Multimodal Drone & Satellite Imagery",
+    ],
+  },
+  {
+    number: "02",
+    title: "Generative AI & ML",
+    description:
+      "Machine learning and generative AI systems for multimodal analysis, creative intelligence, and intelligent automation.",
+    projects: ["CreativeScore — AI Neuromarketing", "Movers AI — Vision-Based Invoice Generation"],
+  },
+  {
+    number: "03",
+    title: "AI Agents & RAG",
+    description:
+      "LLM-powered knowledge assistants, Retrieval-Augmented Generation, voice agents, and intelligent workflow automation.",
+    projects: [
+      "Petroleum Knowledge Assistant",
+      "Atlas Knowledge Assistant",
+      "AI Receptionist — VAPI Voice Agent",
+    ],
+  },
+];
 
 const PROJECTS = [
   {
@@ -125,6 +155,32 @@ const PROJECTS = [
     role: "Computer Vision Engineer",
     body: "Real-time sports CV system on live HIKvision RTSP feeds: detect, track and analyze players, balls and game events. YOLOv8m + ByteTrack + TrackNet for low-latency detection and tracking, optimized via ONNX and TensorRT. Custom algorithms handle ball interpolation, bounce detection, speed/angle/acceleration estimation, polygon-based basket/goal validation and net movement analysis. Multi-camera sync enables accurate event logging, player identification and automatic highlight generation — an AI coach for match analysis.",
     stack: ["YOLOv8", "ByteTrack", "TrackNet", "ONNX", "TensorRT"],
+  },
+  {
+    img: projVapi,
+    title: "AI Receptionist",
+    tag: "Voice AI · Production",
+    role: "AI Engineer",
+    body: "Built a production-ready AI voice receptionist for hospital appointment management, enabling patients to schedule, cancel, and retrieve appointments through natural voice conversations.\nIntegrated VAPI as the voice AI layer for real-time speech-to-text, LLM function calling, and text-to-speech interactions.\nDeveloped a FastAPI backend exposing appointment scheduling, cancellation, and lookup APIs connected to a SQLite database through SQLAlchemy.\nBuilt a Streamlit administration dashboard allowing hospital staff to view schedules, manage appointments, and perform manual operations.\nDesigned the complete voice-to-database workflow with REST API integration, Pydantic validation, automatic API documentation, and independent dashboard access.",
+    stack: ["Voice AI", "VAPI", "FastAPI", "LLM Agents", "Streamlit", "SQLAlchemy", "Python"],
+    github: "https://github.com/MuhammadHammadBashir/hospital-ai-receptionist",
+  },
+  {
+    img: projAtlas,
+    title: "Atlas Knowledge Assistant",
+    tag: "AI Engineering · Production",
+    role: "AI / Machine Learning Engineer",
+    body: "Built a production-grade AI knowledge assistant for engineering organizations that converts internal SOPs, runbooks, and technical documentation into a searchable, auditable knowledge system.\nImplemented a Trigger → Retrieve → Reason → Respond architecture with specialized knowledge and task agents, local TF-IDF retrieval, and Claude/OpenAI model routing.\nIntegrated ClickUp automation to retrieve tasks, resolve linked SOPs, generate grounded responses, post structured comments, and update task status automatically.\nImplemented confidence-based escalation, citation-backed responses, token and cost tracking, and three-tier model routing to optimize accuracy and inference cost.\nBuilt an MCP-native architecture with Hermes Agent integration and a Streamlit interface for Q&A, knowledge-base search, ClickUp workflows, and usage analytics.",
+    stack: [
+      "RAG",
+      "Multi-Agent AI",
+      "LLM Engineering",
+      "MCP",
+      "ClickUp Automation",
+      "Streamlit",
+      "Python",
+    ],
+    github: "https://github.com/MuhammadHammadBashir/Atlas_Research_assistant",
   },
   {
     video: soopaVideo,
@@ -167,22 +223,6 @@ const PROJECTS = [
     link: "https://www.creativescore.ai/",
   },
   {
-    img: projAtlas,
-    title: "Atlas Knowledge Assistant",
-    tag: "AI Engineering · Production",
-    role: "AI / Machine Learning Engineer",
-    body: "Built a production-grade AI knowledge assistant for engineering organizations that converts internal SOPs, runbooks, and technical documentation into a searchable, auditable knowledge system.\nImplemented a Trigger → Retrieve → Reason → Respond architecture with specialized knowledge and task agents, local TF-IDF retrieval, and Claude/OpenAI model routing.\nIntegrated ClickUp automation to retrieve tasks, resolve linked SOPs, generate grounded responses, post structured comments, and update task status automatically.\nImplemented confidence-based escalation, citation-backed responses, token and cost tracking, and three-tier model routing to optimize accuracy and inference cost.\nBuilt an MCP-native architecture with Hermes Agent integration and a Streamlit interface for Q&A, knowledge-base search, ClickUp workflows, and usage analytics.",
-    stack: [
-      "RAG",
-      "Multi-Agent AI",
-      "LLM Engineering",
-      "MCP",
-      "ClickUp Automation",
-      "Streamlit",
-      "Python",
-    ],
-  },
-  {
     img: projPetroleum,
     title: "Petroleum Knowledge Assistant",
     tag: "Generative AI · RAG",
@@ -198,14 +238,7 @@ const PROJECTS = [
       "OpenAI",
       "Next.js",
     ],
-  },
-  {
-    img: projVapi,
-    title: "AI Receptionist",
-    tag: "Voice AI · Production",
-    role: "AI Engineer",
-    body: "Built a production-ready AI voice receptionist for hospital appointment management, enabling patients to schedule, cancel, and retrieve appointments through natural voice conversations.\nIntegrated VAPI as the voice AI layer for real-time speech-to-text, LLM function calling, and text-to-speech interactions.\nDeveloped a FastAPI backend exposing appointment scheduling, cancellation, and lookup APIs connected to a SQLite database through SQLAlchemy.\nBuilt a Streamlit administration dashboard allowing hospital staff to view schedules, manage appointments, and perform manual operations.\nDesigned the complete voice-to-database workflow with REST API integration, Pydantic validation, automatic API documentation, and independent dashboard access.",
-    stack: ["Voice AI", "VAPI", "FastAPI", "LLM Agents", "Streamlit", "SQLAlchemy", "Python"],
+    github: "https://github.com/MuhammadHammadBashir/Petrolum_knowledge_assistant",
   },
 ];
 
@@ -251,8 +284,8 @@ function Portfolio() {
       <About />
       <Services />
       <Experience />
+      <ProjectCategories />
       <Projects />
-
       <Testimonials />
       <Contact />
       <Footer />
@@ -298,105 +331,132 @@ function Nav() {
 }
 
 function Hero() {
-  return (
-    <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28">
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.3fr_1fr] gap-12 items-center relative">
-        <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono text-primary">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Available for work
-          </div>
-          <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.02]">
-            Muhammad <span className="text-gradient">Hammad</span>
-            <br />
-            Bashir
-          </h1>
-          <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-xl">
-            Computer Vision Engineer building real-time sports AI, multi-camera video intelligence
-            and multimodal LLM systems. 5+ years from research to production.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
-            >
-              View projects <ArrowIcon />
-            </a>
-            <a
-              href={LINKS.cv}
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
-            >
-              <DownloadIcon /> Download CV
-            </a>
-            <a
-              href={LINKS.email}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
-            >
-              Get in touch
-            </a>
-          </div>
-          <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
-            {[
-              ["5+", "Years experience"],
-              ["30+", "Production projects"],
-              ["4", "Global teams"],
-            ].map(([n, l]) => (
-              <div key={l}>
-                <dt className="font-display text-3xl text-gradient font-semibold">{n}</dt>
-                <dd className="text-xs text-muted-foreground mt-1">{l}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+return (
+<section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28">
+<div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
 
-        <div className="relative">
-          <div className="absolute -inset-6 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 blur-3xl" />
-          <div className="relative glass-card rounded-2xl overflow-hidden glow-ring">
-            <img
-              src={portrait}
-              alt="Muhammad Hammad Bashir — Computer Vision Engineer"
-              width={896}
-              height={1120}
-              className="w-full h-auto object-cover"
-            />
-            <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-background via-background/80 to-transparent">
-              <div className="font-mono text-xs text-primary">$ ./detect --realtime</div>
-              <div className="font-mono text-xs text-muted-foreground mt-1">
-                Sports AI · Multimodal · MLOps
-              </div>
-            </div>
+  <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1.3fr_1fr] gap-12 items-center relative">
+    <div>
+      <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-mono text-primary">
+        <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+        Available for AI & ML projects
+      </div>
+
+      <h1 className="mt-6 text-5xl md:text-7xl font-semibold leading-[1.02]">
+        Muhammad <span className="text-gradient">Hammad</span>
+        <br />
+        Bashir
+      </h1>
+
+      <p className="mt-5 text-lg md:text-xl text-muted-foreground max-w-2xl">
+        Machine Learning Engineer building{" "}
+        <span className="text-foreground">
+          intelligent systems that see, reason, and act
+        </span>
+        {" "}— from real-time computer vision and sports analytics to
+        Generative AI, RAG, AI agents, multimodal systems, and production
+        ML.
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <a
+          href="#projects"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition"
+        >
+          View projects <ArrowIcon />
+        </a>
+
+        <a
+          href={LINKS.cv}
+          download
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
+        >
+          <DownloadIcon /> Download CV
+        </a>
+
+        <a
+          href={LINKS.email}
+          className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-5 py-3 text-sm font-medium hover:bg-surface-2 transition"
+        >
+          Get in touch
+        </a>
+      </div>
+
+      <dl className="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+        {[
+          ["5+", "Years experience"],
+          ["30+", "Production projects"],
+          ["4", "Global teams"],
+        ].map(([n, l]) => (
+          <div key={l}>
+            <dt className="font-display text-3xl text-gradient font-semibold">
+              {n}
+            </dt>
+            <dd className="text-xs text-muted-foreground mt-1">
+              {l}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+
+    <div className="relative">
+      <div className="absolute -inset-6 bg-gradient-to-tr from-primary/20 via-transparent to-accent/20 blur-3xl" />
+
+      <div className="relative glass-card rounded-2xl overflow-hidden glow-ring">
+        <img
+          src={portrait}
+          alt="Muhammad Hammad Bashir — Machine Learning Engineer"
+          width={896}
+          height={1120}
+          className="w-full h-auto object-cover"
+        />
+
+        <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-background via-background/80 to-transparent">
+          <div className="font-mono text-xs text-primary">
+            $ ./build --intelligent
+          </div>
+
+          <div className="font-mono text-xs text-muted-foreground mt-1">
+            Computer Vision · GenAI · RAG · AI Agents · MLOps
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </div>
+</section>
+
+);
 }
 
 function About() {
   return (
     <section id="about" className="py-24">
+      {" "}
       <div className="max-w-5xl mx-auto px-6">
-        <SectionLabel num="01" title="About" />
+        {" "}
+        <SectionLabel num="01" title="About" />{" "}
         <p className="mt-8 text-xl md:text-2xl leading-relaxed text-foreground/90 font-display">
-          I build <span className="text-gradient">real-time AI systems</span> that ship — across
-          sports analytics, neuromarketing, agriculture, healthcare and multimodal AI.
-        </p>
+          I build <span className="text-gradient">production-ready AI systems</span> that solve
+          real-world problems across computer vision, sports analytics, generative AI, multimodal
+          intelligence, and intelligent automation.{" "}
+        </p>{" "}
         <div className="mt-6 grid md:grid-cols-2 gap-8 text-muted-foreground leading-relaxed">
+          {" "}
           <p>
-            Specialized in end-to-end video intelligence: object detection, tracking, pose
-            estimation and event recognition with YOLO, MediaPipe, ByteTrack and modern
-            deep-learning pipelines. Strong focus on low-latency production, multi-camera streaming
-            analytics and scalable MLOps.
-          </p>
+            With 5+ years of experience in machine learning, I specialize in building end-to-end AI
+            solutions — from real-time computer vision and video intelligence to LLM applications,
+            RAG systems, AI agents, and multimodal workflows. My work spans sports, advertising,
+            agriculture, healthcare, and enterprise applications.{" "}
+          </p>{" "}
           <p>
-            I take ownership of the full stack — from data pipelines and model fine-tuning through
-            ONNX/TensorRT optimization to FastAPI services on AWS, Azure and serverless GPU. The
-            goal is always the same: a system that holds up under real load, on real video.
-          </p>
-        </div>
-      </div>
+            I take systems from data and experimentation to production, combining model development,
+            inference optimization, APIs, cloud deployment, and MLOps. I focus on building AI that
+            is not only accurate, but scalable, reliable, and ready to operate in real-world
+            environments.{" "}
+          </p>{" "}
+        </div>{" "}
+      </div>{" "}
     </section>
   );
 }
@@ -453,7 +513,52 @@ function Experience() {
     </section>
   );
 }
+function ProjectCategories() {
+  return (
+    <section id="project-categories" className="py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <SectionLabel num="04" title="Project Categories" />
 
+        <p className="mt-4 max-w-2xl text-muted-foreground">
+          Selected projects organized around the AI systems and capabilities I specialize in
+          building.
+        </p>
+
+        <div className="mt-12 grid lg:grid-cols-3 gap-5">
+          {PROJECT_CATEGORIES.map((category) => (
+            <article key={category.title} className="glass-card rounded-2xl p-6 md:p-7">
+              <div className="font-mono text-xs text-primary">{category.number}</div>
+
+              <h3 className="mt-3 text-xl md:text-2xl font-semibold">{category.title}</h3>
+
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                {category.description}
+              </p>
+
+              <div className="mt-6 pt-5 border-t border-border/60">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-3">
+                  Selected Projects
+                </div>
+
+                <ul className="space-y-2">
+                  {category.projects.map((project) => (
+                    <li
+                      key={project}
+                      className="flex items-center gap-3 rounded-lg px-3 py-3 border border-border/50 text-sm text-foreground/85"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      <span>{project}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 function Projects() {
   return (
     <section id="projects" className="py-24">
@@ -519,6 +624,16 @@ function Projects() {
                     className="mt-5 inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition"
                   >
                     Visit live project <ArrowIcon />
+                  </a>
+                )}{" "}
+                {p.github && (
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:text-accent transition"
+                  >
+                    GitHub <ArrowIcon />
                   </a>
                 )}
               </div>
